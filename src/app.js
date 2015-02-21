@@ -10,7 +10,7 @@ var ajax = require('ajax');
 //change IP, Port and the Name of the device you want to control depending on your setup.
 var fhemIp = '192.168.0.101';
 var fhemPort = '8083';
-var deviceName = 'WifiLED_Martin';
+var deviceName = 'WifiLight_Martin';
 
 //This are the actual fhem commands you want to associate with your buttons. The 1 after some commands is optional and means it changes gradually and not instantaneous.
 var up = 'on 1'; 
@@ -34,7 +34,7 @@ var command = fhemUrl + 'set ' + deviceName +' ';
 //Main Screen. It doesn't look good, but I'm too lazy to change it right now. 
 var main = new UI.Card({
   title: 'Light Control',
-  body: 'Press up to turn the light on, down to turn it off. Long press up/down to dim. Press Select to choose a color.'
+  body: ''
 });
 
 //This function executes the command through ajax by opening an URL.
@@ -74,7 +74,7 @@ main.on('click', 'select', function(e) {
         subtitle: ''
         },
         {
-        title: 'Grün',
+        title: 'Gruen',
         subtitle: ''
         },
         {
